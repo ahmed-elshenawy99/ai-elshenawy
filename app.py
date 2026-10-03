@@ -27,7 +27,7 @@ if prompt:
         # بنبعت المحادثة كاملة عشان يفهم السياق
         contents = [m["content"] for m in st.session_state.messages]
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.8-flash",
             contents=contents,
             config={"tools": [{"google_search": {}}]},  # Gemini بيدور في جوجل
         )
